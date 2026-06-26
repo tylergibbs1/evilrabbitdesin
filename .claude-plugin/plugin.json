@@ -1,0 +1,11 @@
+{
+  "name": "evilrabbitdesin",
+  "description": "Evil Rabbit's and the Vercel Geist design system's approach to interfaces, brand, and type as an Agent Skill — design as a system, not decoration.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tyler Gibbs"
+  },
+  "skills": [
+    "./skills/evil-rabbit-design"
+  ]
+}

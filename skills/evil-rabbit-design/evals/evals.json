@@ -1,0 +1,135 @@
+{
+  "skill_name": "evil-rabbit-design",
+  "evals": [
+    {
+      "skills": ["evil-rabbit-design"],
+      "query": "We want our developer-tool landing page to feel like Vercel. The designer made it dark with a purple-to-blue gradient hero, glowing cards, and a neon accent on every section. Is this on the right track?",
+      "files": [],
+      "expected_behavior": [
+        "Identifies this as the 'shallow imitation' of the aesthetic — copying a look without the system",
+        "Reframes toward a monochrome foundation: near-black #171717 (not pure #000), white, off-white canvas, hairline borders",
+        "States color should carry meaning, not decorate — drop the per-section neon and gradients",
+        "Recommends structure from 1px borders and tonal surfaces instead of glowing cards / heavy shadows",
+        "Emphasizes type and whitespace doing the work, with at most one purposeful accent",
+        "Does NOT simply approve the gradient/neon direction as 'Vercel-like'"
+      ]
+    },
+    {
+      "skills": ["evil-rabbit-design"],
+      "query": "What exact colors, spacing, and border radius should I use to match the Geist design system for a product dashboard?",
+      "files": [],
+      "expected_behavior": [
+        "Gives concrete tokens, not vibes: #171717 primary text, #ffffff/#fafafa backgrounds, #ebebeb hairline borders",
+        "Names Vercel Blue #006bff (current) and/or legacy #0070f3 as the accent for meaning",
+        "Cites the 4px spacing scale (4,8,12,16,24,32,40,64,96) and 8/16/32-40 rhythm",
+        "Gives the radius family (6px sm, 12px md, 16px lg, 9999px full) and the one-radius-per-view rule",
+        "References the 100-1000 semantic step model (backgrounds/borders/solid/text)",
+        "Pulls from references/geist-system.md rather than inventing an arbitrary scale"
+      ]
+    },
+    {
+      "skills": ["evil-rabbit-design"],
+      "query": "Our app feels flat. I want to add some personality — animated gradient backgrounds, a bouncy loading mascot, and drop shadows on the cards to make them pop. Thoughts?",
+      "files": [],
+      "expected_behavior": [
+        "Applies 'function over gimmick' — decoration that doesn't clarify structure/state/brand is noise",
+        "Pushes back on decorative motion; motion is for clarification only, ~150-300ms",
+        "Recommends borders and tonal surfaces over drop shadows for hierarchy",
+        "Suggests personality should come from typographic rigor, restraint, and craft, not added ornament",
+        "May note that 'flat' often means weak hierarchy — fix with weight/size/contrast, not decoration",
+        "Does NOT endorse the gradient/mascot/shadow additions as the fix"
+      ]
+    },
+    {
+      "skills": ["evil-rabbit-design"],
+      "query": "I'm designing a logo for a small infra startup and want that clean, geometric Vercel feel. How should I approach it?",
+      "files": [],
+      "expected_behavior": [
+        "Points to geometry-first: build from exact geometric primitives (the Vercel mark is an equilateral triangle)",
+        "Recommends monochrome — black mark on white, or inverted white-on-black roundel — no gradient or ornament",
+        "Advises against decorating the mark; precision and restraint over flourish",
+        "Connects to 'constraints are the design tool' — few primitives, used exactly",
+        "References visual-language.md geometry/triangle guidance",
+        "Does NOT suggest gradients, glows, or literal/illustrative logo treatments"
+      ]
+    },
+    {
+      "skills": ["evil-rabbit-design"],
+      "query": "We have a hero shot that looks amazing in Figma, but the real app has dense tables, long names, and empty states. The team wants to ship based on the mockup. Good idea?",
+      "files": [],
+      "expected_behavior": [
+        "Invokes 'design for real production usage, not a hero shot / portfolio screenshot'",
+        "Insists on designing every reachable state: full, dense, long-text, empty, light and dark",
+        "Frames craft as surviving the real product, not just the pretty frame",
+        "Warns that a flourish that only works in the mockup will fail in production",
+        "Recommends stress-testing the system's rhythm against real data before shipping",
+        "Does NOT approve shipping from the isolated mockup"
+      ]
+    },
+    {
+      "skills": ["evil-rabbit-design"],
+      "query": "Pick fonts for our docs site. I was thinking a friendly humanist sans for headings and a different serif for body to add contrast and warmth. And we have a code-heavy site.",
+      "files": [],
+      "expected_behavior": [
+        "Recommends a single grotesque family (Geist, or Inter as a free fallback) used precisely over a mixed pairing",
+        "Notes Geist is a Swiss/geometric grotesque with high x-height, built for crisp small-size rendering",
+        "Strongly recommends Geist Mono (or a clean monospace) for code, terminals, data, and technical metadata",
+        "Advises hierarchy from the type scale, weight, and tight display tracking — not from font variety",
+        "May reference the heading-/label-/copy- token families and 16px base",
+        "Does NOT endorse the humanist-sans + serif pairing as the right call for this aesthetic"
+      ]
+    },
+    {
+      "skills": ["evil-rabbit-design"],
+      "query": "Accessibility review flagged that our minimal design uses #000 on #fff everywhere, removed focus outlines because they 'looked ugly,' and uses 13px and 7px gaps in places. How do we keep it minimal but fix this?",
+      "files": [],
+      "expected_behavior": [
+        "Replaces pure #000 with near-black #171717 — softer and more considered, still high contrast",
+        "Insists focus outlines are part of the look, not a tax — restore a visible focus ring (e.g. the white-gap + 2px #006bff box-shadow) rather than removing it",
+        "Fixes off-grid spacing by snapping to the 4px scale (8/12/16...)",
+        "Frames accessibility and high contrast as native to the system, not opposed to minimalism",
+        "Keeps WCAG AA contrast as a requirement",
+        "Does NOT accept removing focus states for aesthetics"
+      ]
+    },
+    {
+      "skills": ["evil-rabbit-design"],
+      "query": "I'm building a dark-theme dashboard in Geist. What are the exact background, text, border, and focus-ring values, and how do the 100-1000 color steps actually map to usage?",
+      "files": [],
+      "expected_behavior": [
+        "Gives dark-theme anchors: background-100 #000000, primary text #ededed (not pure #fff), secondary #a0a0a0",
+        "Notes borders/overlays use translucent gray-alpha (e.g. gray-alpha-400 #ffffff24) rather than solid grays in dark",
+        "Gives the dark focus ring box-shadow: 0 0 0 2px #000000, 0 0 0 4px #47a8ff (blue-900)",
+        "Explains the precise step model: 100/200/300 bg/hover/active, 400/500/600 border/hover/active, 700/800 solid fill, 900/1000 secondary/primary text",
+        "Distinguishes gray-* (opaque, for text/fills) from gray-alpha-* (translucent, for borders/overlays) and from background-*",
+        "Pulls exact values from geist-spec-dark.md rather than approximating, and notes accent blue is used for links/focus/success"
+      ]
+    },
+    {
+      "skills": ["evil-rabbit-design"],
+      "query": "Review the copy in our UI: a button labeled 'OK', a success toast 'Successfully deleted the project!', and an empty state that just says 'No data'. Anything to change for the Vercel/Geist style?",
+      "files": [],
+      "expected_behavior": [
+        "Replaces 'OK' with a verb+noun action label (e.g. 'Delete Project' / context-appropriate action)",
+        "Rewrites the toast to name the specific thing, drop the trailing period, and never say 'successfully': 'Project deleted'",
+        "Rewrites the empty state to point to the first action (e.g. 'No deployments yet. Push to your Git repository to create one.')",
+        "Notes Title Case for buttons/labels vs sentence case for body/toasts",
+        "Treats copy as part of the design — precise, no filler, no marketing superlatives",
+        "References the Voice & Content rules from the Geist spec"
+      ]
+    },
+    {
+      "skills": ["evil-rabbit-design"],
+      "query": "Leadership keeps asking us to add more visual flair to stand out, but I admire how restrained Vercel's design is. How do I argue for restraint, and is it really just 'less is more'?",
+      "files": [],
+      "expected_behavior": [
+        "Explains restraint as a system/engineering discipline, not a mood — strip every token that isn't carrying weight",
+        "Frames constraints as the design tool that makes remaining decisions meaningful, not a limitation",
+        "Notes the look is downstream of the system: build the system (monochrome default, borders, type rigor, grid) and the distinctive look follows",
+        "Connects 'simplicity, minimalism, speed' to a faster, clearer product, not just taste",
+        "Distinguishes the actual method from the cargo-culted aesthetic",
+        "Avoids reducing it to a glib 'less is more' platitude without the underlying discipline"
+      ]
+    }
+  ]
+}
