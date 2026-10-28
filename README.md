@@ -4,13 +4,13 @@ How Evil Rabbit (Vercel's founding brand designer) and the **Geist** design syst
 
 ## Install
 
-```
+```bash
 npx skills add tylergibbs1/evilrabbitdesin
 ```
 
 Or clone directly into your skills directory:
 
-```
+```bash
 git clone https://github.com/tylergibbs1/evilrabbitdesin.git \
   ~/.claude/skills/evilrabbitdesin
 ```
@@ -98,4 +98,4 @@ Full source list and caveats: [`skills/evil-rabbit-design/references/sources.md`
 
 ## License
 
-MIT
+[MIT](LICENSE)
